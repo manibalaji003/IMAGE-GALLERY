@@ -1,0 +1,100 @@
+h2{
+   color: blueviolet;
+}
+.searchcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    flex-direction: column;
+}
+
+.searchbutton{
+    margin: 0 1rem;
+}
+
+.filters{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+ .filtercontent{
+   margin:  1rem;
+    background-color: blueviolet;
+    color: white;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.filtercontent:hover{
+    cursor: pointer;
+}
+
+
+.imagecontainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+   justify-content: center;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.imgsubcon{
+    margin: 2%;   
+    border-radius: 1rem;
+}
+
+.imgsubcon:hover{
+    scale: 1.1;
+    transition: 0.1s;
+}
+
+.imagescon{
+    max-width: 300px;
+    max-height: fit-content;
+    border: 2px solid black;
+    margin: 5% 0;
+    border-radius: 10px;
+    
+  
+}
+
+.pagebuttons{
+    display: flex;
+    justify-content: space-around;
+    margin: 2%;
+
+}
+
+.imagefooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+ .Button{
+    background-color: blueviolet;
+    border: none;
+}
+
+ .Button:hover{
+    background-color: rgba(137, 43, 226, 0.705);
+
+}
+
+.downloadbtn{
+    background-color: green;
+    border: none;
+}
+
+.downloadbtn:hover{
+    background-color: rgba(0, 128, 0, 0.678);
+}
