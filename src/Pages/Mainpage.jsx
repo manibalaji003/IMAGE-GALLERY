@@ -32,8 +32,6 @@ const Mainpage = () => {
         alert("please enter valid input");
       }
      
-
-      console.log('data', data);
     } catch (error) {
       if(error){
         alert("Error not Found");
