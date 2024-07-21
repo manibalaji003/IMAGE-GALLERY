@@ -1,5 +1,5 @@
 import {Button,Container, Form,Card} from 'react-bootstrap'
-import { useRef,useState,useEffect, useCallback} from 'react'
+import { useRef,useState, useCallback} from 'react'
 import axios from 'axios'
 import {motion} from 'framer-motion'
 import Header from '../Components/Header'
@@ -26,13 +26,18 @@ const Mainpage = () => {
           import.meta.env.VITE_API_KEY
         }`
       );
-
+      if(data.results.length!==0){
       setImages(data.results);
+      }else{
+        alert("please enter valid input");
+      }
      
 
       console.log('data', data);
     } catch (error) {
-      console.log(error);
+      if(error){
+        alert("Error not Found");
+      }
     }
   },[])
   
@@ -47,7 +52,8 @@ const resetSearch = () =>{
 
     const handlesearch = (e)=>{
       e.preventDefault();
-      if( !searchInput.current.value){
+      searchInput.current.value=(searchInput.current.value).trim();
+      if( searchInput.current.value!==null){
         resetSearch()
       }else{
         alert("Please Enter valid input");
@@ -61,9 +67,9 @@ const resetSearch = () =>{
 
 
 
-    useEffect(() => {
-      fetchImages();
-    }, [fetchImages]);
+    // useEffect(() => {
+    //   fetchImages();
+    // }, [fetchImages]);
 
 
 
